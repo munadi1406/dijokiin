@@ -1,0 +1,14 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https:t3s.dreamice.my.id</loc>
+    <lastmod>2024-01-22T22:29:26+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https:t3s.dreamice.my.id/store</loc>
+    <lastmod>2024-01-22T22:29:26+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

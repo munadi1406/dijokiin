@@ -26,7 +26,7 @@ export default function Faqs() {
     return (
         <div className="flex flex-col gap-2 my-8 justify-center items-center ">
             <h1 className="text-md font-semibold">FAQS</h1>
-            <Text>Pertanyaan yang Sering Diajukan</Text>
+            <Text className="w-full text-center">Pertanyaan yang Sering Diajukan</Text>
             <div className="flex flex-col gap-2">
                 {data.map((e, i) => (
                     <Card key={i}>

@@ -26,7 +26,7 @@ export default function SecondHero() {
     return (
         <div className='flex justify-center items-center flex-col gap-2 w-full p-2  min-h-screen'>
             <h1 className='text-center text-md font-bold uppercase '>Cara Kerja Kami</h1>
-            <Text className={"text-center w-2/3"}>Apa yang Anda Dapatkan dengan Layanan Bantuan Akademis Kami</Text>
+            <Text className={"text-center md:w-2/3 w-full"}>Apa yang Anda Dapatkan dengan Layanan Bantuan Akademis Kami</Text>
             <p className='text-md  text-center '>Membantu Anda menyelesaikan tugas kuliah, pembuatan web untuk tugas kuliah, dan pengembangan situs web untuk laporan magang atau skripsi dengan profesional dan efisien.</p>
             <div className='w-full grid md:grid-cols-2 grid-cols-1 gap-4 px-2 py-4'>
                 {data.map(({ icon, title, desc }, i) => (
