@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col gap-2 justify-start items-center">
-          <p className="text-blue-600 font-semibold w-full text-center">Percayakan Tugas Anda Dengan T3S</p>
+          <p className="text-blue-600 font-semibold w-full text-center">Percayakan Tugas Anda Dengan Dijokiin</p>
           <Text className={"w-full text-center"}>Rebahan Santai Tugas Selesai</Text>
           <div>
             <ConsultationNow />

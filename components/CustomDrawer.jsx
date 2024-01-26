@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,34 +7,51 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
+} from "@/components/ui/drawer";
+import Image from "next/image";
 
-const CustomDrawer = () => {
+
+const CustomDrawer = ({ isOpen, setIsOpen, data }) => {
+  const {price,title,img} = data 
+  
+  const handleOrder = ()=>{
+    const nomorWhatsApp = '082148161129';
+    const message = `Halo, saya tertarik dengan produk /n"${title}" /nprice ${price}.`
+    const urlWhatsApp = `https://wa.me/${nomorWhatsApp}`;
+    window.open(urlWhatsApp,'_blank')
+  }
+  
   return (
-    <Drawer shouldScaleBackground={false} open={false}>
-    <DrawerTrigger asChild  >
-      <Button variant="outline">Open Drawer</Button>
-    </DrawerTrigger>
-    <DrawerContent>
-      <div className="mx-auto w-full max-w-sm">
-        <DrawerHeader>
-          <DrawerTitle>Move Goal</DrawerTitle>
-          <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-        </DrawerHeader>
-        <div className="p-4 pb-0">
-          testing
+    <Drawer
+      shouldScaleBackground={false}
+      open={isOpen}
+      onOpenChange={setIsOpen}
+    >
+      <DrawerContent>
+        <div className="mx-auto w-full max-w-sm">
+          <DrawerHeader>
+            <DrawerTitle className="text-blue-600">{`IDR ${Number(price).toLocaleString('id-ID')}`}</DrawerTitle>
+            <DrawerDescription>{title}</DrawerDescription>
+          </DrawerHeader>
+          <div className="p-4 pb-0"> 
+            <Image
+              src={img}
+              alt={data.title}
+              placeholder="blur"
+              width={"auto"}
+              height={"auto"}
+            />
+          </div>
+          <DrawerFooter>
+            <Button className="bg-blue-600" onClick={handleOrder}>Beli</Button>
+            <DrawerClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DrawerClose> 
+          </DrawerFooter>
         </div>
-        <DrawerFooter>
-          <Button>Submit</Button>
-          <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </div>
-    </DrawerContent>
-  </Drawer>
-  )
-}
+      </DrawerContent>
+    </Drawer>
+  );
+};
 
-export default CustomDrawer
+export default CustomDrawer;
