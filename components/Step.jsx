@@ -39,7 +39,7 @@ export default function Step() {
     ]
     return (
         <div className="w-full grid md:grid-cols-2 grid-cols-1 gap-2 md:px-24 px-4 my-8">
-            <div className="flex flex-col gap-2 lg:col-span-2 col-span-full">
+            <div className="flex flex-col gap-2 md:col-span-1 col-span-full">
                 <Text> Selesaikan Tugas kuliah Anda dengan mudah bersama Dijokiin dalam beberapa langkah sederhana.</Text>
                 <div className="mt-3 flex justify-center items-center">
                     <div className="border-l-2 pl-2 w-max border-blue-600 flex flex-col gap-2">
