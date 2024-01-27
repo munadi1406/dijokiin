@@ -2,28 +2,42 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "DIjokiin | Rebahan Santai Tugas Selesai",
-  description: "Dijokiin, destinasi utama untuk pengerjaan tugas web dengan kemudahan dan kenyamanan. Dengan fokus khusus pada tugas di dunia web, kami membantu Anda menyelesaikan proyek-proyek dengan efisien dan profesional. Dari pengembangan situs hingga desain responsif, DIjokiin hadir untuk memenuhi kebutuhan Anda. Temukan layanan pengerjaan tugas terbaik, eksplorasi kreatif, dan solusi web yang inovatif di satu tempat. Mari bergabung dengan kami dan alami pengalaman pengerjaan tugas yang tak tertandingi, khususnya di dunia web.",
-  generator: 'Next.js',
-  applicationName: 'DiJokiin - Rebahan Santai Tugas Selesai',
-  referrer: 'origin-when-cross-origin',
-  keywords: ['Dijokiin', 'dreamice','Rebahan', 'Tugas Kuliah', 'kuliah', 'tugas web', 'joki tugas', 'Web Development', 'Website Development','buatin tugasku','buatin tugas','joki tugas','jasa joki tugas','jasa tugas','jasa pengerjaan tugas','jasa pembuatan tugas','tugas sekolah','tugas kuliah'],
+  title: "Jasa Joki Tugas Web Profesional | DIjokiin",
+  description: "Dijokiin membantu Anda menyelesaikan tugas web dengan mudah dan cepat. Kami memiliki tim joki tugas profesional yang berpengalaman dan berdedikasi untuk memberikan layanan terbaik. Dari pengembangan situs hingga desain responsif, DIjokiin hadir untuk memenuhi kebutuhan Anda.",
+  keywords: ['Dijokiin', 'dreamice','Rebahan', 'Tugas Kuliah', 'kuliah', 'tugas web', 'joki tugas', 'Web Development', 'Website Development','buatin tugasku','buatin tugas','joki tugas','jasa joki tugas','jasa tugas','jasa pengerjaan tugas','jasa pembuatan tugas','tugas sekolah','tugas kuliah','tugas web PHP','tugas web HTML','tugas web CSS'],
   authors: [{ name: 'Fathullah Munadi' }],
   creator: 'Fathullah Munadi',
-  publisher: 'Fathullah Munadi',
-  bingbot:"index, follow",
-  googlebot:"index, follow",
-  robots:"index, follow",
+  publisher: 'Fathullah Munadi', 
   formatDetection: {
-    email: false,
+    email: "fathullahmunadi1406@gmail.com",
     address: false,
-    telephone: false,
+    telephone: "+6283863841766",
   },
+  metadataBase: new URL('https://dijokiin.dreamice.my.id'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'de-DE': '/de-DE',
+    },
+  }, 
+  openGraph: {
+    title: 'Jasa Joki Tugas Web Profesional | DIjokiin',
+    description: 'Dijokiin membantu Anda menyelesaikan tugas web dengan mudah dan cepat. Kami memiliki tim joki tugas profesional yang berpengalaman dan berdedikasi untuk memberikan layanan terbaik. DIjokiin hadir untuk memenuhi kebutuhan Anda.',
+    url: 'https://dijokiin.dreamice.my.id',
+    siteName: 'DIjokiin',
+    locale: 'id_ID',
+    type: 'website',
+  },
+  category: 'technology',
 };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -35,6 +49,7 @@ export default function RootLayout({ children }) {
         </div>
         <Footer />
       </body>
+      <GoogleAnalytics  gaId="G-PLT7VYP6VX" />
     </html>
   );
 }

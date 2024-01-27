@@ -6,7 +6,7 @@ export default function CustomCard({ icon, title, desc }) {
                 {icon}
             </div>
             <div className="flex gap-2 flex-col">
-                <h1 className="text-2xl font-bold bg-gradient-to-tr from-blue-700 to-indigo-900 bg-clip-text text-transparent">{title}</h1>
+                <h2 className="text-2xl font-bold bg-gradient-to-tr from-blue-700 to-indigo-900 bg-clip-text text-transparent">{title}</h2>
                 <p className="pr-2 text-gray-900">{desc}</p>
             </div>
         </div>

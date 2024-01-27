@@ -11,8 +11,7 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <main className="px-20 p-4">
-      
+    <main className="md:px-20 px-2 p-4">
       <Hero />
       <SecondHero />
       <Step />

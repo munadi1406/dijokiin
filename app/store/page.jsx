@@ -11,9 +11,9 @@ export default function page() {
         <p className="text-black font-semibold text-center ">
           Kami Juga Meyediakan Source Code Atau Aplikasi Yang Sudah Jadi
         </p>
-        <h1 className="text-xl font-bold text-blue-600 text-center ">
+        <h2 className="text-xl font-bold text-blue-600 text-center ">
           Tentu Saja Dengan Harga Yang Lebih Murah Pas Untuk Kantong Mahasiswa
-        </h1>
+        </h2>
         <StoreData />
       </div>
   );
