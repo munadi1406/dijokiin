@@ -9,7 +9,13 @@ import Link from "next/link";
 
 
 export default function Home() {
-
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: "Jasa Joki Tugas Web Profesional | DIjokiin",
+    image: "/assets/img/web.png",
+    description: "Dijokiin: Solusi Profesional Tugas Web. Tim joki kami berpengalaman dalam pengembangan dan desain situs responsif. Percayakan proyek Anda pada kami untuk hasil terbaik dengan kecepatan dan kualitas unggul.",
+  }
   return (
     <main className="md:px-20 px-2 p-4">
       <Hero />
@@ -19,7 +25,7 @@ export default function Home() {
       <div className="grid md:grid-cols-2 grid-cols-1 gap-2 py-10">
         <div className="flex justify-start items-center flex-col gap-2">
           <p className="text-blue-600 w-full text-center font-semibold">Bebas Untuk Anda Kembangkan Lagi, Dan Tentu Saja Dengan Harga Yang Lebih Terjangkau Sesuai Untuk Kantong Mahasiswa</p>
-          <Text className={"w-full text-center"}>Kami Juga Menyediakan Source Web App Yang Sudah Jadi</Text>
+          <Text className={"w-full text-center"}>Kami Juga Menyediakan Source Web App Yang Sudah Jadi</Text> 
           <div>
             <Button className="bg-blue-600">
               <Link href={'/store'}>Store</Link>
@@ -34,6 +40,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </main>
   );
 }

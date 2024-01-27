@@ -31,18 +31,20 @@ const Navbar = () => {
         <NavigationMenu className="md:block hidden">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/">
+              <Link href={'/'} legacyBehavior passHref>
                 <NavigationMenuLink
                   active={pathName === "/"}
+                  
                   className={navigationMenuTriggerStyle()}
                 >
                   Home
                 </NavigationMenuLink>
-              </Link>
+              </Link> 
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/store">
+            <Link  href="/store" legacyBehavior passHref>
                 <NavigationMenuLink
+               
                   active={pathName === "/store"}
                   className={navigationMenuTriggerStyle()}
                 >

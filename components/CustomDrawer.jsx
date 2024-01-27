@@ -36,10 +36,12 @@ const CustomDrawer = ({ isOpen, setIsOpen, data }) => {
           <div className="p-4 pb-0"> 
             <Image
               src={img}
-              alt={data.title}
+              alt={title}
               placeholder="blur"
-              width={"auto"}
-              height={"auto"}
+              className="rounded-md w-full h-auto"
+              width={500}
+              height={300}
+              blurDataURL={`data:image/jpeg;base64,${img}`}
             />
           </div>
           <DrawerFooter>
