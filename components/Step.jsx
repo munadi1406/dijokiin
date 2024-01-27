@@ -7,6 +7,7 @@ import { FiCoffee } from "react-icons/fi";
 import { IoIosCode } from "react-icons/io";
 import { CiCircleCheck } from "react-icons/ci";
 import Text from "./Text";
+import stepImage from '../public/assets/img/step.webp'
 
 export default function Step() {
   const data = [
@@ -59,8 +60,8 @@ export default function Step() {
       </div>
       <div className="lg:flex hidden justify-center p-2 items-center bg-gradient-to-b from-blue-500 to-indigo-800 rounded-md">
         <Image
-          src={'/assets/img/step.webp'}
-          alt="Rebahan Santai Tugas Selesai Dijokiin"
+          src={stepImage}
+          alt="dijokiin"
           className="rounded-md w-full h-auto"
           placeholder="blur"
           width={500}

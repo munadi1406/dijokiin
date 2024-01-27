@@ -28,21 +28,21 @@ const Navbar = () => {
     <nav className="w-full md:px-20 px-4 flex justify-between items-center flex-wrap py-2">
       <Applogo />
       <div className="flex flex-wrap gap-5 justify-center items-center">
-        <NavigationMenu className="md:block hidden">
+        <NavigationMenu className="md:block hidden" >
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href={'/'} legacyBehavior passHref>
+              <Link href={'/'} legacyBehavior passHref title="Toko DiJokiin">
                 <NavigationMenuLink
                   active={pathName === "/"}
                   
                   className={navigationMenuTriggerStyle()}
                 >
                   Home
-                </NavigationMenuLink>
+                </NavigationMenuLink> 
               </Link> 
             </NavigationMenuItem>
             <NavigationMenuItem>
-            <Link  href="/store" legacyBehavior passHref>
+            <Link  href="/store" legacyBehavior passHref title="Toko DiJokiin">
                 <NavigationMenuLink
                
                   active={pathName === "/store"}

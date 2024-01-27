@@ -5,6 +5,7 @@ import SecondHero from "@/components/SecondHero";
 import Step from "@/components/Step";
 import Text from "@/components/Text";
 import { Button } from "@/components/ui/button";
+import Head from "next/head";
 import Link from "next/link";
 
 
@@ -18,6 +19,9 @@ export default function Home() {
   }
   return (
     <main className="md:px-20 px-2 p-4">
+      <Head>
+      <meta name="google-site-verification" content="C_sDwgcAW8MJ34AFTSMKO10Jbau3nAP33QysY2Oe6mE" />
+      </Head>
       <Hero />
       <SecondHero />
       <Step />

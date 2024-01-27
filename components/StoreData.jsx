@@ -41,15 +41,13 @@ export default function StoreData() {
             )}`}</CardDescription>
           </CardHeader>
           <CardContent>
-            <Image
-              alt={e.title}
-              src={e.img}
-              placeholder="blur"
-              className="rounded-md w-full h-auto"
-              width={500}
-              height={300}
-              blurDataURL={`data:image/jpeg;base64,${e.img}`}
-            />
+                <Image
+                  alt={`dijokiin ${e.title}`}
+                  src={e.img}
+                  placeholder="blur"
+                  className="rounded-md"
+                  blurDataURL={`data:image/jpeg;base64,${e.img}`}
+                />
           </CardContent>
         </Card>
       ))}
