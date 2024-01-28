@@ -4,11 +4,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import Image from "next/image";
+import Image from "./Image";
 import { useState } from "react";
 import CustomDrawer from "./CustomDrawer";
 
@@ -19,7 +18,7 @@ export default function StoreData() {
     setIsOpen(!isOpen);
     setCurrentData(e);
   };
-
+ 
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-2 px-2 py-10">
       <CustomDrawer
@@ -41,16 +40,16 @@ export default function StoreData() {
             )}`}</CardDescription>
           </CardHeader>
           <CardContent>
-                <Image
-                  alt={`dijokiin ${e.title}`}
-                  src={e.img}
-                  placeholder="blur"
-                  className="rounded-md"
-                  blurDataURL={`data:image/jpeg;base64,${e.img}`}
-                />
+            <Image
+              alt={`dijokiin ${e.title}`}
+              id={e.img}
+              className="rounded-md"
+              blurDataURL={`data:image/jpeg;base64,${e.img}`}
+            />
           </CardContent>
+          
         </Card>
-      ))}
+      ))} 
     </div>
   );
 }

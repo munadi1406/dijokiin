@@ -6,18 +6,18 @@ import {
   DrawerDescription,
   DrawerFooter,
   DrawerHeader,
-  DrawerTitle,
+  DrawerTitle, 
 } from "@/components/ui/drawer";
-import Image from "next/image";
+import Image from "./Image";
 
 
 const CustomDrawer = ({ isOpen, setIsOpen, data }) => {
-  const {price,title,img} = data 
+  const {price,title,img,tech} = data 
   
   const handleOrder = ()=>{
     const nomorWhatsApp = '082148161129';
     const message = `Halo, saya tertarik dengan produk /n"${title}" /nprice ${price}.`
-    const urlWhatsApp = `https://wa.me/${nomorWhatsApp}`;
+    const urlWhatsApp = `https://wa.me/${nomorWhatsApp}text=${message}`;
     window.open(urlWhatsApp,'_blank')
   }
   
@@ -32,15 +32,19 @@ const CustomDrawer = ({ isOpen, setIsOpen, data }) => {
           <DrawerHeader>
             <DrawerTitle className="text-blue-600">{`IDR ${Number(price).toLocaleString('id-ID')}`}</DrawerTitle>
             <DrawerDescription>{title}</DrawerDescription>
+            <div className="w-full flex flex-wrap gap-2">
+            {tech && tech.split(",").map((techData) => (
+              <h4 className="bg-blue-600/20 text-[10px] font-semibold text-blue-600 px-2 py-1 rounded-full" key={techData}>
+                  {techData}
+                </h4>
+              ))}
+                  </div>
           </DrawerHeader>
           <div className="p-4 pb-0"> 
             <Image
-              src={img}
+              id={img}
               alt={title}
-              placeholder="blur"
               className="rounded-md w-full h-auto"
-              width={500}
-              height={300}
               blurDataURL={`data:image/jpeg;base64,${img}`}
             />
           </div>

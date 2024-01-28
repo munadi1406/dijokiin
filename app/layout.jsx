@@ -15,9 +15,9 @@ export const metadata = {
   creator: 'Fathullah Munadi',
   publisher: 'Fathullah Munadi', 
   formatDetection: {
-    email: "fathullahmunadi1406@gmail.com",
+    email: true,
     address: false,
-    telephone: "+6283863841766",
+    telephone: true,
   },
   metadataBase: new URL('https://dijokiin.dreamice.my.id'),
   alternates: {
@@ -26,7 +26,7 @@ export const metadata = {
       'en-US': '/en-US',
       'de-DE': '/de-DE',
     },
-  }, 
+  },  
   openGraph: {
     title: 'Jasa Joki Tugas Web Profesional | DIjokiin',
     description: 'Dijokiin membantu Anda menyelesaikan tugas web dengan mudah dan cepat. Kami memiliki tim joki tugas profesional yang berpengalaman dan berdedikasi untuk memberikan layanan terbaik. DIjokiin hadir untuk memenuhi kebutuhan Anda.',
@@ -36,8 +36,10 @@ export const metadata = {
     type: 'website',
   },
   category: 'technology',
+  verification: {
+    google: 'C_sDwgcAW8MJ34AFTSMKO10Jbau3nAP33QysY2Oe6mE',
+  },
 };
-
 
 export default function RootLayout({ children }) {
   return (
