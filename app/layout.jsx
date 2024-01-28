@@ -36,9 +36,9 @@ export const metadata = {
     type: 'website',
   },
   category: 'technology',
-  verification: {
-    google: 'C_sDwgcAW8MJ34AFTSMKO10Jbau3nAP33QysY2Oe6mE',
-  },
+  // verification: {
+  //   google: 'C_sDwgcAW8MJ34AFTSMKO10Jbau3nAP33QysY2Oe6mE',
+  // },
 };
 
 export default function RootLayout({ children }) {
