@@ -20,31 +20,29 @@ import {
 import { useState } from "react";
 import { BsMenuApp } from "react-icons/bs";
 
-const Navbar = () => { 
-    const [isOpen,setIsOpen] = useState(false)
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const pathName = usePathname();  
-  return (  
+  const pathName = usePathname();
+  return (
     <nav className="w-full md:px-20 px-4 flex justify-between items-center flex-wrap py-2">
       <Applogo />
       <div className="flex flex-wrap gap-5 justify-center items-center">
-        <NavigationMenu className="md:block hidden" >
+        <NavigationMenu className="md:block hidden">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href={'/'} legacyBehavior passHref title="Toko DiJokiin">
+              <Link href={"/"} legacyBehavior passHref title="Toko DiJokiin">
                 <NavigationMenuLink
                   active={pathName === "/"}
-                  
                   className={navigationMenuTriggerStyle()}
                 >
                   Home
-                </NavigationMenuLink> 
-              </Link> 
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-            <Link  href="/store" legacyBehavior passHref title="Toko DiJokiin">
+              <Link href="/store" legacyBehavior passHref title="Toko DiJokiin">
                 <NavigationMenuLink
-               
                   active={pathName === "/store"}
                   className={navigationMenuTriggerStyle()}
                 >
@@ -52,21 +50,61 @@ const Navbar = () => {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref title="About">
+                <NavigationMenuLink
+                  active={pathName === "/about"}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  About
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
           </NavigationMenuList>
-        </NavigationMenu> 
+        </NavigationMenu>
         <div className="md:hidden block">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger onClick={()=>setIsOpen(!isOpen)} className="text-black bg-neutral-400/20 p-2 rounded-md"><BsMenuApp/></SheetTrigger>
-          <SheetContent >
-            <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
-            </SheetHeader>
-            <div className="flex flex-col gap-2 w-full h-full py-4"> 
-                <Link onClick={()=>setIsOpen(!isOpen)} href={'/'} className={`p-2 text-xs font-semibold rounded-md ${pathName === "/" ? 'bg-neutral-600/20' : ''}`}>Home</Link>
-                <Link onClick={()=>setIsOpen(!isOpen)} href={'/store'} className={`p-2 text-xs font-semibold rounded-md ${pathName === "/store" ? 'bg-neutral-600/20' : ''}`}>Store</Link>
-            </div>
-          </SheetContent>
-        </Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-black bg-neutral-400/20 p-2 rounded-md"
+            >
+              <BsMenuApp />
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-2 w-full h-full py-4">
+                <Link
+                  onClick={() => setIsOpen(!isOpen)}
+                  href={"/"}
+                  className={`p-2 text-xs font-semibold rounded-md ${
+                    pathName === "/" ? "bg-neutral-600/20" : ""
+                  }`}
+                >
+                  Home
+                </Link>
+                <Link
+                  onClick={() => setIsOpen(!isOpen)}
+                  href={"/store"}
+                  className={`p-2 text-xs font-semibold rounded-md ${
+                    pathName === "/store" ? "bg-neutral-600/20" : ""
+                  }`}
+                >
+                  Store
+                </Link>
+                <Link
+                  onClick={() => setIsOpen(!isOpen)}
+                  href={"/about"}
+                  className={`p-2 text-xs font-semibold rounded-md ${
+                    pathName === "/about" ? "bg-neutral-600/20" : ""
+                  }`}
+                >
+                  About
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>

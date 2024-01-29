@@ -41,7 +41,7 @@ export default function StoreData() {
           </CardHeader>
           <CardContent>
             <Image
-              alt={`dijokiin ${e.title}`}
+              alt={`${e.title}`}
               id={e.img}
               className="rounded-md"
               blurDataURL={`data:image/jpeg;base64,${e.img}`}

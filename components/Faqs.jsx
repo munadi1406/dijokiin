@@ -10,11 +10,11 @@ import {
 export default function Faqs() {
     const data = [
         {
-            question: "Berapa biaya jasa pembuatan web atau pengerjaan tugas kuliah?",
+            question: "Berapa biaya jasa pembuatan website atau pengerjaan tugas kuliah?",
             answer: "Biaya layanan kami bervariasi tergantung pada kompleksitas proyek. Kami berkomitmen untuk menjaga harga tetap terjangkau untuk kantong mahasiswa. Untuk mendapatkan perkiraan harga, silakan hubungi kami untuk konsultasi lebih lanjut"
         },
         {
-            question: "Apakah ada biaya tambahan untuk revisi?",
+            question: "Apakah ada biaya tambahan untuk revisi pada website yang sudah jadi atau selesai di kerjakan?",
             answer: "Biaya revisi akan disesuaikan dengan fitur yang diminta. Revisi pada source code yang sudah ada mungkin tidak menimbulkan biaya tambahan, namun penambahan fitur atau perubahan besar akan dikenakan biaya tambahan. Kami berusaha memberikan kejelasan terkait biaya untuk memastikan kepuasan Anda."
         },
         {

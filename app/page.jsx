@@ -27,7 +27,7 @@ export default function Home() {
       <div className="grid md:grid-cols-2 grid-cols-1 gap-2 py-10">
         <div className="flex justify-start items-center flex-col gap-2">
           <p className="text-blue-600 w-full text-center font-semibold">Bebas Untuk Anda Kembangkan Lagi, Dan Tentu Saja Dengan Harga Yang Lebih Terjangkau Sesuai Untuk Kantong Mahasiswa</p>
-          <Text className={"w-full text-center"}>Kami Juga Menyediakan Source Web App Yang Sudah Jadi</Text> 
+          <Text className={"w-full text-center"}>Kami Juga Menyediakan Source Code Untuk Aplikasi Berbasis Web Yang Sudah Jadi</Text> 
           <div>
             <Button className="bg-blue-600">
               <Link href={'/store'}>Store</Link>
@@ -37,6 +37,7 @@ export default function Home() {
         <div className="flex flex-col gap-2 justify-start items-center">
           <p className="text-blue-600 font-semibold w-full text-center">Percayakan Tugas Anda Dengan Dijokiin</p>
           <Text className={"w-full text-center"}>Rebahan Santai Tugas Selesai</Text>
+          <Text className={"w-full text-center"}>Tugas Tuntas Tanpa Stress</Text>
           <div>
             <ConsultationNow />
           </div>
