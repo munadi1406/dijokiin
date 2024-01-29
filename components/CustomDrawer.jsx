@@ -15,7 +15,7 @@ const CustomDrawer = ({ isOpen, setIsOpen, data }) => {
   const {price,title,img,tech} = data 
   const handleOrder = () => { 
     const nomorWhatsApp = '082148161129';
-    const message = `Halo, saya tertarik dengan produk "${title}"\nHarga: Rp.${Number(price).toLocaleString('id_ID')}.`;
+    const message = `Halo, saya tertarik dengan produk "${title}"\nHarga: Rp.${Number(price).toLocaleString('id-ID')}.`;
     const urlWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(message)}`;
     window.open(urlWhatsApp, '_blank');
   };
