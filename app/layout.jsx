@@ -32,7 +32,7 @@ export const metadata = {
     description: 'Dijokiin membantu Anda menyelesaikan tugas web dengan mudah dan cepat. Kami memiliki tim joki tugas profesional yang berpengalaman dan berdedikasi untuk memberikan layanan terbaik. DIjokiin hadir untuk memenuhi kebutuhan Anda.',
     url: 'https://dijokiin.dreamice.my.id',
     siteName: 'DIjokiin',
-    locale: 'id_ID',
+    locale: 'id-ID',
     type: 'website',
   },
   category: 'technology',
